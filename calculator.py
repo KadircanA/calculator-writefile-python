@@ -4,8 +4,8 @@ def question ():
 
     print("1. Addition")
     print("2. Subtraction")
-    print("3. Division")
-    print("4. Multiplication")
+    print("3. Multiplication")
+    print("4. Division")
     process=int(input("What kind of math operation would you like to do? (please enter a number): "))
 
     match process:
@@ -19,7 +19,7 @@ def question ():
             Multiplication()
 
         case 4:
-            Subtraction()
+            divide()
 
         case _:
             print("*-"*13)
@@ -53,7 +53,7 @@ def Multiplication():
     x=float(input("Please enter first number:"))
     y=float(input("Please enter second number:"))
     id="multiplication"
-    result =(x/y)
+    result =(x*y)
     print(f"result:{result}")
     Record(id,result)
 def divide():
@@ -69,8 +69,8 @@ def Record(pid,r):
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print(f"{dt_string}--> Result of {pid} prosses is {r}  ")
     subquestion()
-    ths = open("tahsilat_dosyasi.txt", "w")
-    ths.write(f"{dt_string}--> Result of {pid} prosses is {r}  ")
+    ths = open("tahsilat_dosyasi.txt", "a")
+    ths.write(f"\n{dt_string}--> Result of {pid} prosses is {r}  ")
     ths.close()
     pass
 
