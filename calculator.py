@@ -67,10 +67,10 @@ def divide():
 def Record(pid,r):
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print(f"{dt_string}--> Result of {pid} prosses is {r}  ")
-    subquestion()
+    print(f"{dt_string}\t Result of {pid} prosses is {r}  ")
     ths = open("Record_file.txt", "a")
-    ths.write(f"\n{dt_string}--> Result of {pid} prosses is {r}  ")
+    ths.write(f"{dt_string}\t Result of {pid} prosses is {r}\n")
+    subquestion()
     ths.close()
 
 if __name__ == '__main__':
