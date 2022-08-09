@@ -27,10 +27,27 @@ def question ():
             print("*-"*13)
             question()
 def Addition():
-    x=int(input("plese enter first number:"))
-    y=int(input("plese enter second number:"))
+    x=float(input("plese enter first number:"))
+    y=float(input("plese enter second number:"))
     result =(x+y)
     print(result)
+def Subtraction():
+    x=float(input("plese enter first number:"))
+    y=float(input("plese enter second number:"))
+    result =(x-y)
+    print(result)
+def Multiplication():
+    x=float(input("plese enter first number:"))
+    y=float(input("plese enter second number:"))
+    result =(x/y)
+    print(result)
+def Subtraction():
+    x=float(input("plese enter first number:"))
+    y=float(input("plese enter second number:"))
+    result =(x-y)
+    print(result)
+
+
 if __name__ == '__main__':
     
     question()
