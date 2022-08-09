@@ -15,35 +15,48 @@ def question ():
     match process:
         case 1:
             Addition()
+            subquestion()
         case 2:
-            pid=2
+            Subtraction()
+            subquestion()
         case 3:
-            pid=3
+            Multiplication()
+            subquestion()
         case 4:
-            pid=4
+            Subtraction()
+            subquestion()
         case _:
             print("*-"*13)
             print("You entered a wrong number")
             print("*-"*13)
             question()
+
+def subquestion():
+    answer = input("Question? (yes or no)")
+    if any(answer.lower() == f for f in ["yes", 'y', '1', 'ye']):
+        question()   
+    elif any(answer.lower() == f for f in ['no', 'n', '0']):
+        print("BB")
+        
+
 def Addition():
-    x=float(input("plese enter first number:"))
-    y=float(input("plese enter second number:"))
+    x=float(input("Please enter first number:"))
+    y=float(input("Please enter second number:"))
     result =(x+y)
     print(result)
 def Subtraction():
-    x=float(input("plese enter first number:"))
-    y=float(input("plese enter second number:"))
+    x=float(input("Please enter first number:"))
+    y=float(input("Please enter second number:"))
     result =(x-y)
     print(result)
 def Multiplication():
-    x=float(input("plese enter first number:"))
-    y=float(input("plese enter second number:"))
+    x=float(input("Please enter first number:"))
+    y=float(input("Please enter second number:"))
     result =(x/y)
     print(result)
 def Subtraction():
-    x=float(input("plese enter first number:"))
-    y=float(input("plese enter second number:"))
+    x=float(input("Please enter first number:"))
+    y=float(input("Please enter second number:"))
     result =(x-y)
     print(result)
 
@@ -51,5 +64,3 @@ def Subtraction():
 if __name__ == '__main__':
     
     question()
-
-    pass
