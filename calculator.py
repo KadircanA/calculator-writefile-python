@@ -69,11 +69,9 @@ def Record(pid,r):
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print(f"{dt_string}--> Result of {pid} prosses is {r}  ")
     subquestion()
-    ths = open("tahsilat_dosyasi.txt", "a")
+    ths = open("Record_file.txt", "a")
     ths.write(f"\n{dt_string}--> Result of {pid} prosses is {r}  ")
     ths.close()
-    pass
-
 
 if __name__ == '__main__':
     
