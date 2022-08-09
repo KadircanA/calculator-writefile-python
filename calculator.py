@@ -1,4 +1,5 @@
 import time
+from unittest import result
 
 def question ():
     pass
@@ -13,7 +14,7 @@ def question ():
 
     match process:
         case 1:
-            pid=1
+            Addition()
         case 2:
             pid=2
         case 3:
@@ -26,8 +27,10 @@ def question ():
             print("*-"*13)
             question()
 def Addition():
-    
-    pass
+    x=int(input("plese enter first number:"))
+    y=int(input("plese enter second number:"))
+    result =(x+y)
+    print(result)
 if __name__ == '__main__':
     
     question()
