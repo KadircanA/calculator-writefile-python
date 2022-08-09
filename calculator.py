@@ -1,8 +1,4 @@
-import time
-from unittest import result
-
-def question ():
-    pass
+from datetime import datetime
 
 def question ():
 
@@ -15,16 +11,16 @@ def question ():
     match process:
         case 1:
             Addition()
-            subquestion()
+
         case 2:
             Subtraction()
-            subquestion()
+
         case 3:
             Multiplication()
-            subquestion()
+
         case 4:
             Subtraction()
-            subquestion()
+
         case _:
             print("*-"*13)
             print("You entered a wrong number")
@@ -32,7 +28,7 @@ def question ():
             question()
 
 def subquestion():
-    answer = input("Question? (yes or no)")
+    answer = input("New prosses? (yes or no)")
     if any(answer.lower() == f for f in ["yes", 'y', '1', 'ye']):
         question()   
     elif any(answer.lower() == f for f in ['no', 'n', '0']):
@@ -42,23 +38,41 @@ def subquestion():
 def Addition():
     x=float(input("Please enter first number:"))
     y=float(input("Please enter second number:"))
+    id="addition"
     result =(x+y)
-    print(result)
+    print(f"result:{result}")
+    Record(id,result)
 def Subtraction():
     x=float(input("Please enter first number:"))
     y=float(input("Please enter second number:"))
+    id="subtraction"
     result =(x-y)
-    print(result)
+    print(f"result:{result}")
+    Record(id,result)
 def Multiplication():
     x=float(input("Please enter first number:"))
     y=float(input("Please enter second number:"))
+    id="multiplication"
     result =(x/y)
-    print(result)
-def Subtraction():
+    print(f"result:{result}")
+    Record(id,result)
+def divide():
     x=float(input("Please enter first number:"))
     y=float(input("Please enter second number:"))
-    result =(x-y)
-    print(result)
+    id="divide"
+    result =(x/y)
+    print(f"result:{result}")
+    Record(id,result)
+
+def Record(pid,r):
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print(f"{dt_string}--> Result of {pid} prosses is {r}  ")
+    subquestion()
+    ths = open("tahsilat_dosyasi.txt", "w")
+    ths.write(f"{dt_string}--> Result of {pid} prosses is {r}  ")
+    ths.close()
+    pass
 
 
 if __name__ == '__main__':
