@@ -9,26 +9,25 @@ def question ():
     print("2. Subtraction")
     print("3. Division")
     print("4. Multiplication")
-    lang=int(input("What kind of math operation would you like to do? (please enter a number): "))
+    process=int(input("What kind of math operation would you like to do? (please enter a number): "))
 
-    match lang:
+    match process:
         case 1:
-            print("You can become a web developer.")
-
+            pid=1
         case 2:
-            print("You can become a Data Scientist")
-
+            pid=2
         case 3:
-            print("You can become a backend developer")
-    
+            pid=3
         case 4:
-            print("You can become a Blockchain developer")
-
+            pid=4
         case _:
             print("*-"*13)
             print("You entered a wrong number")
             print("*-"*13)
             question()
+def Addition():
+    
+    pass
 if __name__ == '__main__':
     
     question()
